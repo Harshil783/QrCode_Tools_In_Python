@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>925</width>
+    <height>484</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Century</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>QR CODE GENERATOR</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>46</y>
+      <width>391</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 0, 0);
+selection-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Type The Url Or The Text To Generate Qr Code:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="qredit">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>41</y>
+      <width>461</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cambria Math</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">selection-color: rgb(0, 0, 0);
+font: 10pt &quot;Cambria Math&quot;;</string>
+    </property>
+    <property name="placeholderText">
+     <string>Type The Text Here Or The Url To Generate Qr Code</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="qrgenerator">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>110</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Generate</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>150</y>
+      <width>331</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>filename.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="qropen">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>110</y>
+      <width>131</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Open QR Code</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="qropen_2">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>110</y>
+      <width>131</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Read Qr Code</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>156</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Raw Text:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="raw_text_result">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>151</y>
+      <width>411</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="placeholderText">
+     <string>Result Will Be Displayed Here</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionQuit_Program">
+   <property name="text">
+    <string>Quit Program</string>
+   </property>
+  </action>
+  <action name="actionQuit_FromProgram">
+   <property name="text">
+    <string>Quit Program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
