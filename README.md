@@ -14,4 +14,4 @@ This is a utility to work with qr code for generation and decoding.
 - Can Be Used for Generating Qr Codes and Reading Them
 
 ## Screenshots
-![](https://github.com/Harshil783/QrCode_Tools_Gui_In_Python/blob/master/Screenshot%20(3).png)
+<img src="https://github.com/Harshil783/QrCode_Tools_Gui_In_Python/blob/master/Screenshot%20(3).png" width="500">
