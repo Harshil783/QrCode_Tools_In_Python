@@ -1,17 +1,56 @@
-# QrCode_Tools Python
-This is a utility to work with qr code for generation and decoding.
+# QrCode Tools In Python
+> Decode And Generate Qr Code
 
-##Usage
-1. There Is a file named **'PLEASE RUN ME FIRST PLEASE!!!.py'** Run It First Install Required Things For Working Of Python Files
-2.  Then All Modules Will Be Installed That Are Required!
-3. Then Run **'main.pyw'**<- This is Main Application That is Required To Run
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+![GitHub](https://img.shields.io/github/license/Harshil783/QrCode_Tools_In_Python?style=for-the-badge)
 
-##Contribute
-- Contributions Are Always Accepted via issues and upgrading projects,etc
+QrCode Tools Can Help You To Generate QrCode Tools And Can Also Help You To Decode Them!
+Easy To Use
 
-## Why To Use
-- Simple Interface And Easy To Learn
-- Can Be Used for Generating Qr Codes and Reading Them
+![](header.png)
 
-## Screenshots
-<img src="https://github.com/Harshil783/QrCode_Tools_Gui_In_Python/blob/master/Screenshot%20(3).png" width="500">
+## Installation
+
+OS X & Linux:
+
+```sh
+python3 PLEASE RUN ME FIRST PLEASE!!!.py
+```
+
+Windows:
+
+```sh
+python3 PLEASE RUN ME FIRST PLEASE!!!.py
+```
+
+## Usage example
+python3 Main_Logic.py
+
+_For more examples and usage, please refer to the [Wiki][wiki]._
+
+## Development setup
+```sh
+pip install qrcode pyzbar PIL PyQt5
+```
+
+## Release History
+
+* v1.0
+  * Upgrade Ui And Logic Of Program!
+  * Easy To Use Interface
+
+## Meta
+
+Harshil Pandey –  harshilpandey57@gmail.com
+
+Distributed under the Apache-2.0 license. See ``LICENSE`` for more information.
+
+[My Github Account](https://github.com/Harshil783/)
+
+## Contributing
+
+1. Fork it (<https://github.com/Harshil783/QrCode_Tools_In_Python/fork>)
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
