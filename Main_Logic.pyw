@@ -17,10 +17,8 @@ class Ui(QtWidgets.QMainWindow):
         self.button = self.findChild(QtWidgets.QPushButton, 'qrgenerator')
         self.button.clicked.connect(self.QrCodeGenerator) # Remember to pass the definition/method, not the return value!
         self.input = self.findChild(QtWidgets.QLineEdit, 'qredit')
-        self.button1 = self.findChild(QtWidgets.QPushButton, 'qropen')
+        self.button1 = self.findChild(QtWidgets.QPushButton, 'qropen')#raw_type_result
         self.button1.clicked.connect(self.OpenQRCode)
-        self.readqr = self.findChild(QtWidgets.QPushButton,'qropen_2')
-        self.readqr.clicked.connect(self.ReadQR)
         exitAct = QtWidgets.QAction('&Exit', self)
         exitAct.setShortcut('Ctrl+Q')
         exitAct.setStatusTip('Exit application')
@@ -37,20 +35,23 @@ class Ui(QtWidgets.QMainWindow):
         if self.qredit.text() == '':
             QMessageBox.warning(self, "Error", "Please Type In Something To Generate Qr Code")
         else:
-            self.url.save("filename.png","PNG")
+            fname = QFileDialog.getSaveFileName(self, 'Open file', path,"Image files (*.png)")[0]
+            if fname == '':
+                QMessageBox.warning(self, "Error", "Specify Name To Save File!")
+            else:
+                self.url.save(fname,"PNG")
 
     def OpenQRCode(self):
         fname = QFileDialog.getOpenFileName(self, 'Open file', path,"Image files (*.jpg *.gif *.png *.svg)")[0]
         self.label_2.setPixmap(QPixmap(fname))
-    
-    def ReadQR(self):
-        fname = QFileDialog.getOpenFileName(self, 'Open file', path,"Image files (*.jpg *.gif *.png *.svg)")[0]
         data = decode(Image.open(fname))
-        data1 = str(data[0][0]).replace('b','')
+        print(data)
+        data1 = str(data[0][0]).replace("b'",'').replace("'","")
+        type1 = str(data[0][1])
         self.result1 = self.findChild(QtWidgets.QLineEdit, 'raw_text_result')
-        self.result1.setText(data1)
-        
-
+        self.result1.setText(data1)#'raw_type_result'
+        self.result2 = self.findChild(QtWidgets.QLineEdit, 'raw_type_result')
+        self.result2.setText(type1)
 
 app = QtWidgets.QApplication(sys.argv)
 app.setStyleSheet(qdarkgraystyle.load_stylesheet())
