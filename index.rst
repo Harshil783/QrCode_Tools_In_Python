@@ -8,7 +8,7 @@ QrCode Tools In Python
 QrCode Tools Can Help You To Generate QrCode Tools And Can Also Help You
 To Decode Them! Easy To Use
 
-|image1|
+.. image:: https://github.com/Harshil783/QrCode_Tools_In_Python/blob/master/Screenshot%20(3).png
 
 Installation
 ------------
@@ -71,4 +71,3 @@ Contributing
 .. |forthebadge made-with-python| image:: http://ForTheBadge.com/images/badges/made-with-python.svg
    :target: https://www.python.org/
 .. |GitHub| image:: https://img.shields.io/github/license/Harshil783/QrCode_Tools_In_Python?style=for-the-badge
-.. |image1| image:: https://github.com/Harshil783/QrCode_Tools_In_Python/blob/master/Screenshot%20(3).png
