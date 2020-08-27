@@ -10,6 +10,16 @@ path = os.path.abspath(os.getcwd())
 import qrcode
 
 class Ui(QtWidgets.QMainWindow):
+    def resource_path(relative_path):
+        """ Get absolute path to resource, works for dev and for PyInstaller """
+        try:
+            # PyInstaller creates a temp folder and stores path in _MEIPASS
+            base_path = sys._MEIPASS
+        except Exception:
+            base_path = os.path.abspath(".")
+
+        return os.path.join(base_path, relative_path)
+
     def __init__(self):
         super(Ui, self).__init__()
         uic.loadUi('main.ui', self)
@@ -43,15 +53,17 @@ class Ui(QtWidgets.QMainWindow):
 
     def OpenQRCode(self):
         fname = QFileDialog.getOpenFileName(self, 'Open file', path,"Image files (*.jpg *.gif *.png *.svg)")[0]
-        self.label_2.setPixmap(QPixmap(fname))
-        data = decode(Image.open(fname))
-        print(data)
-        data1 = str(data[0][0]).replace("b'",'').replace("'","")
-        type1 = str(data[0][1])
-        self.result1 = self.findChild(QtWidgets.QLineEdit, 'raw_text_result')
-        self.result1.setText(data1)#'raw_type_result'
-        self.result2 = self.findChild(QtWidgets.QLineEdit, 'raw_type_result')
-        self.result2.setText(type1)
+        try:
+            data = decode(Image.open(fname))
+            self.label_2.setPixmap(QPixmap(fname))
+            data1 = str(data[0][0]).replace("b'",'').replace("'","")
+            type1 = str(data[0][1])
+            self.result1 = self.findChild(QtWidgets.QLineEdit, 'raw_text_result')
+            self.result1.setText(data1)#'raw_type_result'
+            self.result2 = self.findChild(QtWidgets.QLineEdit, 'raw_type_result')
+            self.result2.setText(type1)
+        except AttributeError:
+            pass
 
 app = QtWidgets.QApplication(sys.argv)
 app.setStyleSheet(qdarkgraystyle.load_stylesheet())
