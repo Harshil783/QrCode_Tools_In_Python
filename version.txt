@@ -1,0 +1,8 @@
+__author__ = 'Harshil Pandey'
+__copyright__ = 'Copyright (C) 2020, Harshil Pandey'
+__credits__ = ['harshil Pandey]
+__license__ = 'The Apache-2.0 License'
+__version__ = '1.0'
+__maintainer__ = 'Harshil Pandey'
+__email__ = 'harshipandey57@gmail.com'
+__status__ = 'Stable'
