@@ -26,8 +26,6 @@ python3 PLEASE RUN ME FIRST PLEASE!!!.py
 ## Usage example
 python3 Main_Logic.py
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
 ## Development setup
 ```sh
 pip install qrcode pyzbar PIL PyQt5
