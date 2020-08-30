@@ -34,7 +34,7 @@ class checkUpdate(QtWidgets.QMainWindow):
                     with ZipFile('update.zip', 'r') as zipObj: # Extract all the contents of zip file in current directory
                         zipObj.extractall(path=l)
                     os.remove('update.zip')
-                except ConnectionResetError:
+                except Exception:
                     QMessageBox.warning(self, "Error", "Connection Error")
             else:
                 QMessageBox.information(self, "Updated", "Software Up-to Date")
