@@ -36,6 +36,11 @@ pip install qrcode pyzbar PIL PyQt5
 * v1.0
   * Upgrade Ui And Logic Of Program!
   * Easy To Use Interface
+* v2.0
+  * Upgraded Ui And Added Drag And Drop Support
+  * Easy To Use Ui
+  * Added Support For Checking Updates
+  * Development of QrCode Generator To Exe For Windows In New Release
 
 ## Meta
 
