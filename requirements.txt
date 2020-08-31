@@ -1,5 +1,5 @@
 qdarkgraystyle
 qrcode
-PIL
+Pillow
 PyQt5
 pyzbar
