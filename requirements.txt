@@ -1,0 +1,5 @@
+qdarkgraystyle
+qrcode
+PIL
+PyQt5
+pyzbar
